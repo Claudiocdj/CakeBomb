@@ -18,7 +18,7 @@ public class SetWallsAndGround : GridInstantiator
 
     private void CreateWalls()
     {
-        GameObject groundObj = CreateGroundObj();
+        gridC.ground = CreateGroundObj();
 
         for (int i = 0; i < gridC.sizeX; i++)
             for (int j = 0; j < gridC.sizeY; j++)
@@ -31,7 +31,7 @@ public class SetWallsAndGround : GridInstantiator
 
                 else
                 {
-                    gridC.grid[i, j] = groundObj;
+                    gridC.grid[i, j] = gridC.ground;
 
                     gridC.groundsPos.Add( new Vector2( i, j ) );
                 }

@@ -8,7 +8,7 @@ public class OnTriggerExplode : MonoBehaviour
     {
         if(other.gameObject.tag == "Explosion")
         {
-            GetComponent<BombExplode>().bombTime = 0f;
+            GetComponent<Explode>().ExplodeEffect();
         }
     }
 }

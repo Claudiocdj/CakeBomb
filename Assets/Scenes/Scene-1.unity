@@ -145,7 +145,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 510250070}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!66 &154278649
 CompositeCollider2D:
@@ -179,8 +179,12 @@ CompositeCollider2D:
         Y: 0
       - X: 0
         Y: 130000000
-      - X: 130000000
+      - X: 110000000
         Y: 130000000
+      - X: 110000000
+        Y: 110000000
+      - X: 130000000
+        Y: 110000000
       - X: 130000000
         Y: 0
   m_CompositePaths:
@@ -191,7 +195,9 @@ CompositeCollider2D:
       - {x: 14, y: -1}
     - - {x: 0, y: 0}
       - {x: 0, y: 13}
-      - {x: 13, y: 13}
+      - {x: 11, y: 13}
+      - {x: 11, y: 11}
+      - {x: 13, y: 11}
       - {x: 13, y: 0}
   m_VertexDistance: 0.0005
 --- !u!50 &154278650
@@ -625,6 +631,24 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 11, y: 11, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 12, y: 11, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 13, y: 11, z: 0}
     second:
       m_TileIndex: 1
@@ -635,6 +659,24 @@ Tilemap:
       m_TileFlags: 1
       m_ColliderType: 1
   - first: {x: -1, y: 12, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 11, y: 12, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 12, y: 12, z: 0}
     second:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
@@ -791,15 +833,15 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 56
+  - m_RefCount: 60
     m_Data: {fileID: 11400000, guid: 060fa354a540bcd47900ff9989d9c85b, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 56
+  - m_RefCount: 60
     m_Data: {fileID: 21300006, guid: 6fa79f68dbbe5d14bab71c463c5770e6, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 56
+  - m_RefCount: 60
     m_Data:
       e00: 1
       e01: 0
@@ -818,7 +860,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 56
+  - m_RefCount: 60
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -883,10 +925,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1203493128}
   - {fileID: 154278648}
+  - {fileID: 1203493128}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1203493127
 GameObject:
@@ -918,7 +960,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 510250070}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1203493129
 TilemapRenderer:
@@ -956,7 +998,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2568,6 +2610,75 @@ MonoBehaviour:
   - {x: 11, y: 12}
   - {x: 12, y: 11}
   - {x: 12, y: 12}
+--- !u!1001 &1695150438
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 593174883186586275, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593174883186586286, guid: f516af42ed556ee428d5fa26ff33d6eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f516af42ed556ee428d5fa26ff33d6eb, type: 3}
 --- !u!1 &1941534751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,7 +2773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &819152671610716729
 GameObject:
@@ -2675,8 +2786,9 @@ GameObject:
   - component: {fileID: 819152671610716727}
   - component: {fileID: 3703280413793444925}
   - component: {fileID: 1648699088}
-  - component: {fileID: 819152671610716731}
   - component: {fileID: 819152671610716730}
+  - component: {fileID: 819152671610716732}
+  - component: {fileID: 819152671610716731}
   m_Layer: 0
   m_Name: MapController
   m_TagString: MapController
@@ -2702,7 +2814,7 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0, y: 1}
   - {x: 1, y: 0}
-  boxOccupancy: 50
+  boxOccupancy: 30
 --- !u!114 &819152671610716731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2718,10 +2830,35 @@ MonoBehaviour:
   objectPrefab: {fileID: 3543786648908651278, guid: f298471003763404ea6d02f5bc5c3301,
     type: 3}
   prohibitedPos:
-  - {x: 0, y: 1}
-  - {x: 1, y: 0}
   - {x: 0, y: 0}
-  number: 2
+  - {x: 1, y: 0}
+  - {x: 0, y: 1}
+  number: 0
+--- !u!114 &819152671610716732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819152671610716729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aaf37c69134c0e4fbf93fd43c603316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 4774062785773419455, guid: e0fa3bf3e1a02b94aba2c00439e51a1e,
+    type: 3}
+  prohibitedPos:
+  - {x: 0, y: 0}
+  - {x: 1, y: 1}
+  - {x: 2, y: 2}
+  - {x: 0, y: 1}
+  - {x: 1, y: 2}
+  - {x: 2, y: 0}
+  - {x: 0, y: 2}
+  - {x: 1, y: 0}
+  - {x: 2, y: 1}
+  number: 5
 --- !u!114 &3703280413793444925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2736,4 +2873,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sizeX: 13
   sizeY: 13
-  useGizmos: 0
+  useGizmos: 1

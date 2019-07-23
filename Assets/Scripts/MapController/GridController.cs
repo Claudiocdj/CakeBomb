@@ -11,7 +11,7 @@ public class GridController : MonoBehaviour
 
     public bool useGizmos = false;
 
-    private GameObject ground;
+    public GameObject ground { get; set; }
     
     void Awake()
     {
@@ -38,6 +38,42 @@ public class GridController : MonoBehaviour
         return null;
     }
 
+    public GameObject GetObj(Vector2 pos)
+    {
+        int i = Mathf.RoundToInt( pos.x );
+        int j = Mathf.RoundToInt( pos.y );
+
+        if (CheckPos( i, j ))
+            return grid[i, j];
+
+        return null;
+    }
+
+    public GameObject SetObj(GameObject obj, int i, int j)
+    {
+        if (CheckPos( i, j ))
+            grid[i, j] = obj;
+
+        return null;
+    }
+
+    public GameObject SetObj(GameObject obj, Vector2 pos)
+    {
+        int i = Mathf.RoundToInt( pos.x );
+        int j = Mathf.RoundToInt( pos.y );
+
+        if (CheckPos( i, j ))
+            grid[i, j] = obj;
+
+        return null;
+    }
+
+    public void SetGround(int i, int j)
+    {
+        if (CheckPos( i, j ))
+            grid[i, j] = ground;
+    }
+
     private void OnDrawGizmos()
     {
         if (!useGizmos) return;
@@ -55,6 +91,15 @@ public class GridController : MonoBehaviour
 
                 if (grid[i, j].tag == "Box")
                     Gizmos.color = new Color( 0, 0, 1, .5f );
+
+                if (grid[i, j].tag == "Player")
+                    Gizmos.color = new Color( 1, 1, 0, .5f );
+
+                if(grid[i, j].tag == "Bomb")
+                    Gizmos.color = new Color( 0, 0, 0, 0.5f );
+
+                if (grid[i, j].tag == "Enemy")
+                    Gizmos.color = new Color( 1, 1, 1, .5f );
 
                 Gizmos.DrawCube( new Vector3( i + 0.5f, j + 0.5f, 0f ), Vector3.one );
             }
