@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetByOccupancy : SetGridObjects
+public class CreateGridObjectsByPercentage : CreateGridObjects
 {
     [SerializeField]
     [Range( 0, 100 )]

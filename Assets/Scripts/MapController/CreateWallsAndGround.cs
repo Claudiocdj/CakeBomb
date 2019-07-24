@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetWallsAndGround : GridInstantiator
+public class CreateWallsAndGround : GridInstantiator
 {
     [SerializeField]
     private GameObject invisibleWallPrefab;
@@ -18,8 +18,6 @@ public class SetWallsAndGround : GridInstantiator
 
     private void CreateWalls()
     {
-        gridC.ground = CreateGroundObj();
-
         for (int i = 0; i < gridC.sizeX; i++)
             for (int j = 0; j < gridC.sizeY; j++)
             {
@@ -27,30 +25,10 @@ public class SetWallsAndGround : GridInstantiator
                     InstantiateObj( invisibleWallPrefab, i, j );
 
                 else if (i % 2 != 0 && j % 2 != 0)
-                {
                     InstantiateObj( objectPrefab, i, j );
-                }
-                    
-
+                
                 else
-                {
-                    gridC.grid[i, j] = gridC.ground;
-
-                    gridC.groundsPos.Add( new Vector2( i, j ) );
-                }
+                    gridC.SetGround(new Vector2(i,j));
             }
-    }
-
-    private GameObject CreateGroundObj()
-    {
-        GameObject groundObj = new GameObject();
-
-        groundObj.transform.parent = transform;
-
-        groundObj.tag = "Ground";
-
-        groundObj.name = "Ground";
-
-        return groundObj;
     }
 }

@@ -1,15 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class DropBomb : MonoBehaviour
+public class InputDropBomb : MonoBehaviour
 {
+    [SerializeField]
+    private KeyCode dropBombButton = KeyCode.Z;
+
     [SerializeField]
     private GameObject bombPrefab;
 
     private void Update()
     {
-        if (Input.GetKeyDown( KeyCode.Z ))
+        if (Input.GetKeyDown( dropBombButton ))
         {
             float x = Mathf.Round( transform.position.x );
 

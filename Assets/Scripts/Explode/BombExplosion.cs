@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class BombExplosion : ObjGridExplode
+public class BombExplosion : UpdateGridOnExplode
 {
     [SerializeField]
     private GameObject explosionPrefab;
@@ -28,18 +27,20 @@ public class BombExplosion : ObjGridExplode
 
     public override void ExplodeEffect()
     {
-        SetExplosionEffect();
+        DefineExplosionLocations();
 
+        //Instantiate explosions prefab
         foreach (Vector2 pos in explosionsPos)
             Instantiate( explosionPrefab, pos, Quaternion.identity );
 
+        //Explode found objects
         foreach (var obj in destroyedObj)
             obj.GetComponent<Explode>().ExplodeEffect();
 
         base.ExplodeEffect();
     }
 
-    private void SetExplosionEffect()
+    private void DefineExplosionLocations()
     {
         int bombPosX = Mathf.RoundToInt( transform.position.x );
         int bombPosY = Mathf.RoundToInt( transform.position.y );
@@ -65,7 +66,7 @@ public class BombExplosion : ObjGridExplode
 
     private bool CheckGridPos(int i, int j)
     {
-        GameObject obj = gridC.GetObj(i, j);
+        GameObject obj = gridC.GetObj(new Vector2(i, j));
 
         if (obj != null)
         {
@@ -77,6 +78,7 @@ public class BombExplosion : ObjGridExplode
                 if (obj.tag == tag)
                 {
                     destroyedObj.Add( obj );
+
                     return false;
                 }
 

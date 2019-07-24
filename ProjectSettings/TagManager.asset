@@ -11,6 +11,8 @@ TagManager:
   - MapController
   - Wall
   - Ground
+  - ChestBox
+  - BorderWall
   layers:
   - Default
   - TransparentFX

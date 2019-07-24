@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ObjGridExplode : Explode
+public class UpdateGridOnExplode : Explode
 {
     protected GridController gridC;
 
@@ -14,10 +12,7 @@ public class ObjGridExplode : Explode
 
     public override void ExplodeEffect()
     {
-        int x = Mathf.RoundToInt( transform.position.x );
-        int y = Mathf.RoundToInt( transform.position.y );
-
-        gridC.SetGround( x, y );
+        gridC.SetGround( transform.position );
 
         base.ExplodeEffect();
     }

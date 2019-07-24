@@ -11,31 +11,29 @@ public class GridController : MonoBehaviour
 
     public bool useGizmos = false;
 
-    public GameObject ground { get; set; }
-    
+    private GameObject ground;
+
     void Awake()
     {
+        CreateGroundObj();
+
         groundsPos = new List<Vector2>();
 
         grid = new GameObject[sizeX, sizeY];
     }
 
-    private bool CheckPos(int i, int j)
+    private bool CheckPos(Vector2 pos)
     {
-        if (i >= sizeX ||
-            j >= sizeY ||
-            i < 0 || j < 0)
+        int i = Mathf.RoundToInt( pos.x );
+        int j = Mathf.RoundToInt( pos.y );
+
+        if (i >= sizeX || j >= sizeY)
+            return false;
+
+        if (i < 0 || j < 0)
             return false;
 
         return true;
-    }
-
-    public GameObject GetObj(int i, int j)
-    {
-        if(CheckPos(i,j))
-            return grid[i, j];
-
-        return null;
     }
 
     public GameObject GetObj(Vector2 pos)
@@ -43,16 +41,8 @@ public class GridController : MonoBehaviour
         int i = Mathf.RoundToInt( pos.x );
         int j = Mathf.RoundToInt( pos.y );
 
-        if (CheckPos( i, j ))
+        if (CheckPos( pos ))
             return grid[i, j];
-
-        return null;
-    }
-
-    public GameObject SetObj(GameObject obj, int i, int j)
-    {
-        if (CheckPos( i, j ))
-            grid[i, j] = obj;
 
         return null;
     }
@@ -62,18 +52,37 @@ public class GridController : MonoBehaviour
         int i = Mathf.RoundToInt( pos.x );
         int j = Mathf.RoundToInt( pos.y );
 
-        if (CheckPos( i, j ))
+        if (CheckPos( pos ))
             grid[i, j] = obj;
 
         return null;
     }
 
-    public void SetGround(int i, int j)
+    public void SetGround(Vector2 pos)
     {
-        if (CheckPos( i, j ))
+        int i = Mathf.RoundToInt( pos.x );
+        int j = Mathf.RoundToInt( pos.y );
+
+        if (CheckPos( pos ))
+        {
             grid[i, j] = ground;
+
+            groundsPos.Add( pos );
+        }
     }
 
+    private void CreateGroundObj()
+    {
+        ground = new GameObject();
+
+        ground.transform.parent = transform;
+
+        ground.tag = "Ground";
+
+        ground.name = "Ground";
+    }
+
+    //DEBUG
     private void OnDrawGizmos()
     {
         if (!useGizmos) return;

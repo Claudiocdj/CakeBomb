@@ -1,23 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D), typeof( SmoothMove ) )]
 public class Movement : MonoBehaviour
 {
     public float speed = 1f;
 
-    private SmoothMove smoothMovement;
+    private SmoothMove sm;
 
+    private Rigidbody2D myRb;
+    
     private void Awake()
     {
-        smoothMovement = GetComponent<SmoothMove>();
+        sm = GetComponent<SmoothMove>();
+
+        myRb = GetComponent<Rigidbody2D>();
     }
 
     protected void Move(Vector3 direction)
     {
-        if (smoothMovement && direction != Vector3.zero)
-            direction = smoothMovement.SmoothMovement( direction );
+        if (sm && direction != Vector3.zero)
+            direction = sm.SmoothMovement( direction );
 
-        GetComponent<Rigidbody2D>().velocity = direction * speed;
+        myRb.velocity = direction * speed;
     }
 }

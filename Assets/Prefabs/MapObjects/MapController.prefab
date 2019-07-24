@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7496603088615648986}
   - component: {fileID: 6588195747535842359}
   - component: {fileID: 5779189399802775773}
+  - component: {fileID: 6291869788833881801}
   m_Layer: 0
   m_Name: MapController
   m_TagString: MapController
@@ -81,10 +82,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5a96dda2d084b46a2152820b436eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 6811714106229806254, guid: a04c0668eebedf14cb7df6958a288c73,
-    type: 3}
+  objectPrefab: {fileID: 0}
   prohibitedPos:
   - {x: 0, y: 0}
   - {x: 0, y: 1}
   - {x: 1, y: 0}
-  boxOccupancy: 10
+  boxOccupancy: 0
+--- !u!114 &6291869788833881801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779189399802775774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aaf37c69134c0e4fbf93fd43c603316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 0}
+  prohibitedPos: []
+  number: 0

@@ -1,9 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ControllerMovement : Movement
+public class InputControllerMovement : Movement
 {
+    [SerializeField]
+    private KeyCode leftArrow = KeyCode.LeftArrow;
+    [SerializeField]
+    private KeyCode rightArrow = KeyCode.RightArrow;
+    [SerializeField]
+    private KeyCode upArrow = KeyCode.UpArrow;
+    [SerializeField]
+    private KeyCode downArrow = KeyCode.DownArrow;
+
     public bool InputRight { get; private set; }
     public bool InputLeft { get; private set; }
     public bool InputDown { get; private set; }
@@ -11,13 +18,13 @@ public class ControllerMovement : Movement
 
     private void Update()
     {
-        InputRight = Input.GetKey( KeyCode.RightArrow );
+        InputRight = Input.GetKey( rightArrow );
 
-        InputLeft = Input.GetKey( KeyCode.LeftArrow );
+        InputLeft = Input.GetKey( leftArrow );
 
-        InputUp = Input.GetKey( KeyCode.UpArrow );
+        InputUp = Input.GetKey( upArrow );
 
-        InputDown = Input.GetKey( KeyCode.DownArrow );
+        InputDown = Input.GetKey( downArrow );
 
         if (InputLeft)
             Move( Vector2.left );

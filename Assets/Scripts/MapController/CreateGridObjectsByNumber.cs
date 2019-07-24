@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetByNumber : SetGridObjects
+public class CreateGridObjectsByNumber : CreateGridObjects
 {
     [SerializeField]
     private int number;

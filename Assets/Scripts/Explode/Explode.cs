@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
+    public event Action SetExplodeAnim = delegate { };
+
+    public event Action DropItem = delegate { };
+
     public virtual void ExplodeEffect()
     {
-        DropOnExplode dropItem = GetComponent<DropOnExplode>();
+        SetExplodeAnim();
 
-        if (dropItem != null)
-            dropItem.Drop();
+        DropItem();
 
         Destroy( gameObject );
     }

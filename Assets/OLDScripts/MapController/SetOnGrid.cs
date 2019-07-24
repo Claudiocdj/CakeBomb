@@ -21,10 +21,10 @@ public class SetOnGrid : MonoBehaviour
             .GetComponent<GridController>();
 
         if (preferenceTags.Length == 0)
-            gridC.SetObj( gameObject, x, y );
+            gridC.SetObj( gameObject, transform.position );
 
         else if (preferenceTags.Length > 0 && CheckPreferenceTags())
-            gridC.SetObj( gameObject, x, y );
+            gridC.SetObj( gameObject, transform.position );
     }
 
     void Update()
@@ -36,8 +36,7 @@ public class SetOnGrid : MonoBehaviour
         {
             if (preferenceTags.Length > 0 && !CheckPreferenceTags())
             {
-                gridC.SetGround( Mathf.RoundToInt( currentPos.x ),
-                Mathf.RoundToInt( currentPos.y ) );
+                gridC.SetGround( currentPos );
 
                 return;
             }
@@ -47,12 +46,11 @@ public class SetOnGrid : MonoBehaviour
             if (obj.tag != gameObject.tag)
                 gridC.SetObj( obj, currentPos );
             else
-                gridC.SetGround( Mathf.RoundToInt(currentPos.x),
-                Mathf.RoundToInt( currentPos.y) );
+                gridC.SetGround( currentPos );
 
             currentPos = new Vector2( x, y );
 
-            gridC.SetObj( gameObject, x, y );
+            gridC.SetObj( gameObject, transform.position );
         }
     }
 

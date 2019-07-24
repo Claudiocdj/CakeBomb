@@ -7,5 +7,13 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: KingRat
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: ac4f620f39eed9a469e85c052aaed5ff, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f4556dc83ffca88489b381ace9339d52, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c8e4abde5fd89684488c749aa5a2cdcf, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 113f9b47778f9564ab146666560c79ad, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2c502641c2a2fb9418eaf450666a59a9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 476312abc90ca024d8a6c4786b4b576f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 64528cb63644a3f4595b241e6c3816f9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4dd28d6e562713d4781fcc29b54929f6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2a83b6fdd67b621409ce2d47dd8e9581, type: 2}

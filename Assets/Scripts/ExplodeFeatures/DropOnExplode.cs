@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof( Explode ) )]
 public class DropOnExplode : MonoBehaviour
@@ -8,7 +6,12 @@ public class DropOnExplode : MonoBehaviour
     [SerializeField]
     private GameObject objPrefab;
 
-    public void Drop()
+    private void Awake()
+    {
+        GetComponent<Explode>().DropItem += Drop;
+    }
+
+    private void Drop()
     {
         Instantiate( objPrefab, transform.position, Quaternion.identity );
     }

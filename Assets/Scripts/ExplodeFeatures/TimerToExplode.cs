@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BombTime : MonoBehaviour
+[RequireComponent(typeof(Explode))]
+public class TimerToExplode : MonoBehaviour
 {
     [SerializeField]
     private float time = 1f;
@@ -19,6 +18,6 @@ public class BombTime : MonoBehaviour
         counter -= Time.deltaTime;
 
         if (counter <= 0)
-            GetComponent<BombExplosion>().ExplodeEffect();
+            GetComponent<Explode>().ExplodeEffect();
     }
 }

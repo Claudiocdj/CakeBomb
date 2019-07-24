@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class SetGridObjects : GridInstantiator
+public abstract class CreateGridObjects : GridInstantiator
 {
     [SerializeField]
     protected List<Vector2> prohibitedPos;

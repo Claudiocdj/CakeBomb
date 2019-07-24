@@ -16,10 +16,11 @@ GameObject:
   - component: {fileID: 9028645574524357448}
   - component: {fileID: 658343504781290096}
   - component: {fileID: 1340152649235458165}
+  - component: {fileID: 4002794056321302846}
   - component: {fileID: 6767127790963154575}
   - component: {fileID: 1828982133954223463}
   m_Layer: 0
-  m_Name: Enemy1
+  m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,6 +193,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dce6f5d531e36642943687f50f82de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagWithExplode:
+  - Explosion
+--- !u!114 &4002794056321302846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987149488661455646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec10cdcb89abf1942a3c2e463d0eff56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animObjectPrefab: {fileID: 3977453257267981606, guid: f91a91ec7a207ea4f8d4dc19604e19a8,
+    type: 3}
 --- !u!114 &6767127790963154575
 MonoBehaviour:
   m_ObjectHideFlags: 0
