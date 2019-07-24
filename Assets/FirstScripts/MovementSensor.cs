@@ -12,7 +12,7 @@ public class MovementSensor : MonoBehaviour
     private Sensor upSensor;
     [SerializeField]
     private Sensor downSensor;
-
+    
     public string[] layers = { "Wall" };
 
     private void Awake()

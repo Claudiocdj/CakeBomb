@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class EnemyMove : MonoBehaviour
 {
     [SerializeField]
-    protected bool isMoving;
+    public bool isMoving;
     [SerializeField]
     protected string[] tagsWithCollide = { "Wall", "Bomb", "Box" };
 

@@ -27,7 +27,10 @@ public class SetWallsAndGround : GridInstantiator
                     InstantiateObj( invisibleWallPrefab, i, j );
 
                 else if (i % 2 != 0 && j % 2 != 0)
+                {
                     InstantiateObj( objectPrefab, i, j );
+                }
+                    
 
                 else
                 {

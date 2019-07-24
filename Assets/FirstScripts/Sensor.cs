@@ -2,7 +2,8 @@
 
 public class Sensor : MonoBehaviour
 {
-    public Vector3 otherPos { get; private set; }
+
+    public Vector3 otherPos;
 
     private string[] layers;
 
@@ -24,9 +25,12 @@ public class Sensor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log( "Trigger em " + gameObject.name );
         foreach(var l in layers)
             if(other.gameObject.tag == l)
             {
+                Debug.Log( gameObject.name + " entrando em " + other.gameObject.name );
+
                 sensorCount++;
 
                 otherPos = other.gameObject.transform.position;
@@ -35,8 +39,14 @@ public class Sensor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log( "Saindo em " + gameObject.name );
         foreach (var l in layers)
             if (other.gameObject.tag == l)
+            {
+                Debug.Log( gameObject.name + " saindo de " + other.gameObject.name );
+
                 sensorCount--;
+            }
+                
     }
 }

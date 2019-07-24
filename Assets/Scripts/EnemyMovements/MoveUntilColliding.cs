@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveUntilColliding : EnemyMove
 {
-    protected Vector3 direction;
+    public Vector3 direction;
 
     private List<Vector3> positions = new List<Vector3>()
     { Vector3.up, Vector3.left, Vector3.right, Vector3.down };
