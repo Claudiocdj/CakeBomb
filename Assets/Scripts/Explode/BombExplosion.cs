@@ -6,11 +6,11 @@ public class BombExplosion : UpdateGridOnExplode
     [SerializeField]
     private GameObject explosionPrefab;
     [SerializeField]
-    private int explosionForce;
-    [SerializeField]
     private string[] blokingTags;
     [SerializeField]
     private string[] destroyedTags;
+
+    private int explosionForce;
 
     public List<Vector2> explosionsPos { get; private set; }
 
@@ -19,6 +19,8 @@ public class BombExplosion : UpdateGridOnExplode
     protected override void Awake()
     {
         base.Awake();
+
+        explosionForce = GameObject.FindWithTag( "ScoreExplosion" ).GetComponent<Score>().scorePoints;
 
         explosionsPos = new List<Vector2>();
 

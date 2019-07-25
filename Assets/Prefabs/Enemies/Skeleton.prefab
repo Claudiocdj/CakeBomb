@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4002794056321302846}
   - component: {fileID: 6767127790963154575}
   - component: {fileID: 6844950210068409177}
+  - component: {fileID: 5614633214716959866}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -237,3 +238,19 @@ MonoBehaviour:
   - Bomb
   - Box
   - Enemy
+--- !u!114 &5614633214716959866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987149488661455646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74f05272e91d6a4c87bbc1d818562c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPoints: 10
+  maxPoints: 50
+  pointsPopupPrefab: {fileID: 211950226280607764, guid: c6b26f2bfc5a37b49bb80dfba0148d31,
+    type: 3}

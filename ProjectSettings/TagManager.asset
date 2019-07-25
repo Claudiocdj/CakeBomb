@@ -13,6 +13,12 @@ TagManager:
   - Ground
   - ChestBox
   - BorderWall
+  - Score
+  - ScoreCookie
+  - ScoreCake
+  - ScoreExplosion
+  - ScoreLives
+  - ScoreShield
   layers:
   - Default
   - TransparentFX

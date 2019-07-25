@@ -7,7 +7,7 @@ public abstract class Timer : MonoBehaviour
 
     private float counter;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         counter = time;
     }

@@ -170,3 +170,5 @@ MonoBehaviour:
     type: 3}
   minCoins: 200
   maxCoins: 500
+  pointsPopupPrefab: {fileID: 211950226280607764, guid: c6b26f2bfc5a37b49bb80dfba0148d31,
+    type: 3}

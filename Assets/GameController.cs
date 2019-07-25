@@ -9,7 +9,11 @@ public class GameController : MonoBehaviour
 
     public string nextLevelName { get; private set; }
 
-    public void SetFirstLevel()
+    private string[] levelsName = { "1-1", "1-2" };
+
+    private int currentLevelId = 0;
+
+    private void Start()
     {
         if (instance == null)
             instance = this;
@@ -18,28 +22,33 @@ public class GameController : MonoBehaviour
             Destroy( gameObject );
 
         DontDestroyOnLoad( this );
+    }
 
-        nextLevelName = "1-1";
+    public void SetFirstLevel()
+    {
+        currentLevelId = 0;
+
+        nextLevelName = levelsName[0];
 
         SceneManager.LoadScene( "ShowLevel" );
     }
 
     public void LoadNextLevel()
     {
-        int nextSceneId = SceneManager.GetSceneByName(nextLevelName).buildIndex;
-
         SceneManager.LoadScene( nextLevelName );
 
-        Debug.Log( nextSceneId );
+        currentLevelId++;
 
-        Scene scene = SceneManager.GetSceneByBuildIndex( nextSceneId + 1 );
-
-        if(scene != null)
-            nextLevelName = scene.name;
+        nextLevelName = levelsName[currentLevelId];
     }
 
     public void LoadBlackScreen()
     {
         SceneManager.LoadScene( "ShowLevel" );
+    }
+
+    public void LoadFirstScreen()
+    {
+        SceneManager.LoadScene( "FirstScene" );
     }
 }
