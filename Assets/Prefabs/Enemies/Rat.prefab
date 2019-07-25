@@ -10,16 +10,17 @@ GameObject:
   m_Component:
   - component: {fileID: 8318730524420752084}
   - component: {fileID: 8318730524420752087}
-  - component: {fileID: 8318730524420752086}
+  - component: {fileID: 495805144009285600}
   - component: {fileID: 8318730524420752081}
+  - component: {fileID: 8318730524420752086}
   - component: {fileID: 5407637945027848836}
   - component: {fileID: 4568088951718349756}
   - component: {fileID: 2656797109119470009}
   - component: {fileID: 8734926197428628017}
-  - component: {fileID: 495805144009285600}
   - component: {fileID: 4077475763962680075}
+  - component: {fileID: 1765867864836827660}
   m_Layer: 0
-  m_Name: Enemy2
+  m_Name: Rat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,6 +88,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &495805144009285600
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8318730524420752082}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: dd8fae04ba16d4f48b09664a158e9896, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &8318730524420752081
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8318730524420752082}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &8318730524420752086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -111,29 +152,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
---- !u!50 &8318730524420752081
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8318730524420752082}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
 --- !u!114 &5407637945027848836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dce6f5d531e36642943687f50f82de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagWithCollide:
+  - Explosion
 --- !u!114 &8734926197428628017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,34 +205,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409cc99b8ae1f3d42914cf5a456521ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoving: 0
+  timeToNextBlock: 0.5
   tagsWithCollide:
   - Wall
   - Bomb
   - Box
   - Enemy
-  timeToNextBlock: 0.5
-  direction: {x: 0, y: 0, z: 0}
   probabilityOfChange: 60
---- !u!95 &495805144009285600
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8318730524420752082}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: dd8fae04ba16d4f48b09664a158e9896, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4077475763962680075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,3 +224,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4de097660525548b6f0aa9ae646e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1765867864836827660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8318730524420752082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec10cdcb89abf1942a3c2e463d0eff56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 3977453257267981606, guid: f91a91ec7a207ea4f8d4dc19604e19a8,
+    type: 3}

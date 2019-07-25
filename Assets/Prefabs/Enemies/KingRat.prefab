@@ -10,14 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 3225184410358531671}
   - component: {fileID: 3225184410358531668}
-  - component: {fileID: 3225184410358531669}
+  - component: {fileID: 6436010359332281187}
   - component: {fileID: 3225184410358531666}
+  - component: {fileID: 3225184410358531669}
   - component: {fileID: 1494055411740765703}
   - component: {fileID: 6977524732921843519}
   - component: {fileID: 8894309718837284154}
   - component: {fileID: 2776619170265870002}
-  - component: {fileID: 6436010359332281187}
   - component: {fileID: 7432667743679321992}
+  - component: {fileID: 8554611387009932662}
   m_Layer: 0
   m_Name: KingRat
   m_TagString: Enemy
@@ -87,6 +88,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6436010359332281187
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3225184410358531665}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 99bea0cd9d3c22c49b88551217e3d01c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &3225184410358531666
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3225184410358531665}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &3225184410358531669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113,27 +154,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
---- !u!50 &3225184410358531666
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3225184410358531665}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
 --- !u!114 &1494055411740765703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dce6f5d531e36642943687f50f82de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagWithCollide:
+  - Explosion
 --- !u!114 &2776619170265870002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,34 +205,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409cc99b8ae1f3d42914cf5a456521ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoving: 0
+  timeToNextBlock: 1
   tagsWithCollide:
   - Wall
   - Bomb
   - Box
   - Enemy
-  timeToNextBlock: 0.5
-  direction: {x: 0, y: 0, z: 0}
-  probabilityOfChange: 60
---- !u!95 &6436010359332281187
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3225184410358531665}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 99bea0cd9d3c22c49b88551217e3d01c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  probabilityOfChange: 100
 --- !u!114 &7432667743679321992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,3 +224,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4de097660525548b6f0aa9ae646e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8554611387009932662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3225184410358531665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec10cdcb89abf1942a3c2e463d0eff56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 3977453257267981606, guid: f91a91ec7a207ea4f8d4dc19604e19a8,
+    type: 3}

@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 8905220613343260635}
   - component: {fileID: 2016426731735859707}
   - component: {fileID: 172213827136853360}
-  - component: {fileID: 8255663543379082736}
+  - component: {fileID: 6421498219383693232}
+  - component: {fileID: 6873111381938457973}
+  - component: {fileID: 8590914300756864250}
+  - component: {fileID: 6640312997480919693}
+  - component: {fileID: 2442553678565617598}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -70,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300076, guid: 850af5067b7bc5e4ba4139b2f3891a22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -125,9 +129,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 0.4, y: 0.4}
   m_EdgeRadius: 0
---- !u!114 &8255663543379082736
+--- !u!114 &6421498219383693232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,7 +140,66 @@ MonoBehaviour:
   m_GameObject: {fileID: 492808158300885797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08e0461abc06847438818db0eea2740a, type: 3}
+  m_Script: {fileID: 11500000, guid: b228b2346c8229d429116fee7ebb2ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagsWithTrigger: []
+  timer: 1
+  isInvencible: 0
+  charges: 1
+  invensiblyOnStart: 1
+--- !u!114 &6873111381938457973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492808158300885797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce6f5d531e36642943687f50f82de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagWithCollide:
+  - Explosion
+--- !u!114 &8590914300756864250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492808158300885797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6530d98c99ac48642b630b15035186a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6640312997480919693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492808158300885797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b228b2346c8229d429116fee7ebb2ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1
+  isInvencible: 1
+  charges: 0
+  invensiblyOnStart: 1
+--- !u!114 &2442553678565617598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492808158300885797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bb33bcd1e3ac740b9c0f734bc66ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagWithCollide:
+  - Player

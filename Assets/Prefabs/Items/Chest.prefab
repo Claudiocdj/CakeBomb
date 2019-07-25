@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 1223836949162704267}
   - component: {fileID: 1952778461445369753}
   - component: {fileID: 6395514441757764489}
+  - component: {fileID: 1458321146909136693}
+  - component: {fileID: 2102420157162558667}
+  - component: {fileID: 6923978709640487862}
+  - component: {fileID: 7538838598404199610}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -68,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300080, guid: 850af5067b7bc5e4ba4139b2f3891a22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,5 +108,65 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 0.4, y: 0.4}
   m_EdgeRadius: 0
+--- !u!114 &1458321146909136693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789439684359756844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dce6f5d531e36642943687f50f82de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagWithCollide:
+  - Explosion
+--- !u!114 &2102420157162558667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789439684359756844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6530d98c99ac48642b630b15035186a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6923978709640487862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789439684359756844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b228b2346c8229d429116fee7ebb2ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1
+  isInvencible: 1
+  charges: 0
+  invensiblyOnStart: 1
+--- !u!114 &7538838598404199610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789439684359756844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812d3b08735ba0745b32018e50b71367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagWithCollide:
+  - Player
+  animPrefab: {fileID: 6192111106320222542, guid: 958143e996a8d3045a7d9e44518ed434,
+    type: 3}
+  minCoins: 200
+  maxCoins: 500

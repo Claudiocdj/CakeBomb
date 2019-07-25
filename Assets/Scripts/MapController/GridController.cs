@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class GridController : MonoBehaviour
@@ -22,11 +21,8 @@ public class GridController : MonoBehaviour
         grid = new GameObject[sizeX, sizeY];
     }
 
-    private bool CheckPos(Vector2 pos)
+    private bool CheckPos(int i, int j)
     {
-        int i = Mathf.RoundToInt( pos.x );
-        int j = Mathf.RoundToInt( pos.y );
-
         if (i >= sizeX || j >= sizeY)
             return false;
 
@@ -41,7 +37,7 @@ public class GridController : MonoBehaviour
         int i = Mathf.RoundToInt( pos.x );
         int j = Mathf.RoundToInt( pos.y );
 
-        if (CheckPos( pos ))
+        if (CheckPos( i, j ))
             return grid[i, j];
 
         return null;
@@ -52,7 +48,7 @@ public class GridController : MonoBehaviour
         int i = Mathf.RoundToInt( pos.x );
         int j = Mathf.RoundToInt( pos.y );
 
-        if (CheckPos( pos ))
+        if (CheckPos( i, j ))
             grid[i, j] = obj;
 
         return null;
@@ -63,7 +59,7 @@ public class GridController : MonoBehaviour
         int i = Mathf.RoundToInt( pos.x );
         int j = Mathf.RoundToInt( pos.y );
 
-        if (CheckPos( pos ))
+        if (CheckPos( i, j ))
         {
             grid[i, j] = ground;
 

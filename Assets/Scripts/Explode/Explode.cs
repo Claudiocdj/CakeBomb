@@ -12,7 +12,7 @@ public class Explode : MonoBehaviour
         SetExplodeAnim();
 
         DropItem();
-
+        
         Destroy( gameObject );
     }
 }

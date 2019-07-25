@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dce6f5d531e36642943687f50f82de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagWithExplode:
+  tagWithCollide:
   - Explosion
 --- !u!114 &8059623428744286350
 MonoBehaviour:
