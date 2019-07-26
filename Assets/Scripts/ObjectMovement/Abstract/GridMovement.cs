@@ -3,8 +3,8 @@ using UnityEngine;
 
 public abstract class GridMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float timeToNextBlock = 1f;
+
+    public float timeToNextBlock = 1f;
     [SerializeField]
     protected string[] tagsWithCollide = { "Wall", "Bomb", "Box", "Enemy" };
 

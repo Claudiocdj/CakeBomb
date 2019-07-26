@@ -14,8 +14,12 @@ public class Score : MonoBehaviour
 
     public int scorePoints { get; private set; }
 
+    private HighScore highScore;
+
     protected virtual void Start()
     {
+        highScore = GetComponent<HighScore>();
+
         scorePoints = 0;
 
         AddPoints( startScorePoints);
@@ -24,6 +28,8 @@ public class Score : MonoBehaviour
     public void AddPoints(int c)
     {
         scorePoints += c;
+
+        highScore.AddCurrentScore( c );
 
         scoreText.text = initText + scorePoints.ToString();
     }

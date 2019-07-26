@@ -8,6 +8,6 @@ public class TimerToReturnMenuScreen : Timer
     protected override void Zero()
     {
         GameObject.FindWithTag( "GameController" )
-            .GetComponent<GameController>().LoadFirstScreen();
+            .GetComponent<GameController>().SetMenuScreen();
     }
 }

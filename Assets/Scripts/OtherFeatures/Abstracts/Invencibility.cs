@@ -5,11 +5,11 @@ using UnityEngine;
 public abstract class Invencibility : MonoBehaviour
 {
     [SerializeField]
-    private float timer;
+    protected float timer;
 
     public bool isInvencible;
 
-    private SpriteRenderer mySprite;
+    protected SpriteRenderer mySprite;
 
     protected virtual void Awake()
     {
@@ -18,10 +18,10 @@ public abstract class Invencibility : MonoBehaviour
 
     protected void ActiveInvencibility()
     {
-        StartCoroutine( InvensibilityEffect() );
+        StartCoroutine( InvencibilityEffect() );
     }
 
-    private IEnumerator InvensibilityEffect()
+    protected virtual IEnumerator InvencibilityEffect()
     {
         isInvencible = true;
 

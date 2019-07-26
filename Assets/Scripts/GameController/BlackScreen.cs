@@ -7,11 +7,14 @@ public class BlackScreen : MonoBehaviour
     private Text phrase;
     [SerializeField]
     private Text level;
-    [SerializeField]
-    private string[] phrases = {"to puta, vou matar todo mundo", "cade meu menino"};
+
+    private GameController gm;
 
     public void Awake()
     {
+        gm = GameObject.FindWithTag( "GameController" )
+                .GetComponent<GameController>();
+
         phrase.text = GetPhrase();
 
         level.text = GetLevelName();
@@ -19,14 +22,11 @@ public class BlackScreen : MonoBehaviour
 
     public string GetLevelName()
     {
-        return "LEVEL " + GameObject.FindWithTag( "GameController" )
-                .GetComponent<GameController>().nextLevelName;
+        return "LEVEL " + gm.GetCurrentSceneName();
     }
 
     private string GetPhrase()
     {
-        int n = Random.Range( 0, phrases.Length );
-
-        return phrases[n];
+        return gm.GetLevelPhrase();
     }
 }

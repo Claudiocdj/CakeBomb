@@ -7,6 +7,6 @@ public class OnTriggerWin : OnTrigger
     protected override void Trigger(GameObject other)
     {
         GameObject.FindWithTag( "GameController" )
-            .GetComponent<GameController>().LoadBlackScreen();
+            .GetComponent<GameController>().Win();
     }
 }

@@ -2,12 +2,11 @@
 
 public abstract class Timer : MonoBehaviour
 {
-    [SerializeField]
-    private float time = 1f;
+    public float time = 1f;
 
-    private float counter;
+    public float counter;
 
-    protected virtual void Awake()
+    protected virtual void Start()
     {
         counter = time;
     }

@@ -10,7 +10,7 @@ public class BombExplosion : UpdateGridOnExplode
     [SerializeField]
     private string[] destroyedTags;
 
-    private int explosionForce;
+    public int explosionForce;
 
     public List<Vector2> explosionsPos { get; private set; }
 

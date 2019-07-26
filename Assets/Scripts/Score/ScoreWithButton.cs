@@ -56,10 +56,8 @@ public class ScoreWithButton : Score
         else return false;
     }
 
-    public void OnClick()
+    public virtual void OnClick()
     {
-        Debug.Log( "clicou" );
-
         cookies.RemovePoints( pointsToNextLevel );
 
         AddPoints(1);

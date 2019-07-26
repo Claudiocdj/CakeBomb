@@ -19,9 +19,11 @@ GameObject:
   - component: {fileID: 815987402}
   - component: {fileID: 4638227339603370073}
   - component: {fileID: 1784615183072835422}
-  - component: {fileID: 8899902816666398906}
   - component: {fileID: 8920362821540437849}
   - component: {fileID: 7581525532403383531}
+  - component: {fileID: 353497958}
+  - component: {fileID: 353497957}
+  - component: {fileID: 4818514671046868061}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -170,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4642512fa5aaf934cac5ab8b7fbed14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   leftArrow: 276
   rightArrow: 275
   upArrow: 273
@@ -244,18 +246,6 @@ MonoBehaviour:
   tagWithCollide:
   - Explosion
   - Enemy
---- !u!114 &8899902816666398906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593174883186586275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6530d98c99ac48642b630b15035186a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8920362821540437849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +274,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   isInvencible: 0
-  charges: 1
+  charges: 0
   invensiblyOnStart: 1
+--- !u!114 &353497958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593174883186586275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b64aa959363ba40b9843be3f94f603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &353497957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593174883186586275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25e4404fff67c24987eacb74c35c1de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canKick: 0
+  inputButton: 120
+  kickedBombPrefab: {fileID: 1526909043467233189, guid: c3bc5f23cde6bad42b9987030e1f5967,
+    type: 3}
+--- !u!114 &4818514671046868061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593174883186586275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7b1ccbbf1b47f4c9997d7e18eb329e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3588456871346197285
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7916556726403657036}
   - component: {fileID: 8322828847094015016}
+  - component: {fileID: 928133983}
   m_Layer: 0
   m_Name: SmoothMovementSensors
   m_TagString: Untagged
@@ -621,6 +652,27 @@ MonoBehaviour:
   downSensor: {fileID: 5064752919031354160}
   layers:
   - Wall
+--- !u!50 &928133983
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6486919046573303955}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &9151722583686154418
 GameObject:
   m_ObjectHideFlags: 0

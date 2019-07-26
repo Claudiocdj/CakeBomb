@@ -48,6 +48,8 @@ TextureImporter:
     21300086: tiles_43
     21300088: tiles_44
     21300090: tiles_45
+    21300092: tiles_46
+    21300094: tiles_47
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -1056,6 +1058,46 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ffb494b0d53a3b34497f05f019ca3903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 16
+        height: 11
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65594cb0716b2f41b172dbc3c652fb7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_47
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 65
+        width: 16
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030d77f5615d2a24182a342a6cb29223
       vertices: []
       indices: 
       edges: []

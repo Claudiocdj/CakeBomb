@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 2776619170265870002}
   - component: {fileID: 7432667743679321992}
   - component: {fileID: 8554611387009932662}
+  - component: {fileID: 945824762798340161}
   m_Layer: 0
   m_Name: KingRat
   m_TagString: Enemy
@@ -238,3 +239,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 3977453257267981606, guid: f91a91ec7a207ea4f8d4dc19604e19a8,
     type: 3}
+--- !u!114 &945824762798340161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3225184410358531665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377f9b274a21c08499e502ec592bc099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objPrefab: {fileID: 8318730524420752082, guid: d9c1840d719e2794ab4f94c1959ef22d,
+    type: 3}
+  minTimeToSummon: 10
+  maxTimeToSummon: 30
