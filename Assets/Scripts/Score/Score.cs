@@ -29,7 +29,8 @@ public class Score : MonoBehaviour
     {
         scorePoints += c;
 
-        highScore.AddCurrentScore( c );
+        if(highScore)
+            highScore.AddCurrentScore( c );
 
         scoreText.text = initText + scorePoints.ToString();
     }

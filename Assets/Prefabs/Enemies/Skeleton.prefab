@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74f05272e91d6a4c87bbc1d818562c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPoints: 10
-  maxPoints: 50
+  minPoints: 50
+  maxPoints: 100
   pointsPopupPrefab: {fileID: 211950226280607764, guid: c6b26f2bfc5a37b49bb80dfba0148d31,
     type: 3}

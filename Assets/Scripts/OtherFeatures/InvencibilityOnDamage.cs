@@ -16,14 +16,14 @@ public class InvencibilityOnDamage : Invencibility
             ActiveInvencibility();
     }
 
-    public void Active()
+    public virtual void Active()
     {
         charges--;
 
         ActiveInvencibility();
     }
 
-    public void AddInvencibility()
+    public virtual void AddInvencibility()
     {
         charges++;
     }

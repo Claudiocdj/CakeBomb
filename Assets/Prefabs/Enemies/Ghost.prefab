@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 5153714442581408854}
   - component: {fileID: 1161510544347350069}
   - component: {fileID: 2311494673493817517}
+  - component: {fileID: 6114512287657674704}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Enemy
@@ -253,3 +254,19 @@ MonoBehaviour:
   timer: 5
   isInvencible: 0
   timeNormal: 5
+--- !u!114 &6114512287657674704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2311494673493817522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74f05272e91d6a4c87bbc1d818562c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPoints: 50
+  maxPoints: 100
+  pointsPopupPrefab: {fileID: 211950226280607764, guid: c6b26f2bfc5a37b49bb80dfba0148d31,
+    type: 3}

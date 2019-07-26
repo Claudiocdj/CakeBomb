@@ -20,10 +20,10 @@ GameObject:
   - component: {fileID: 4638227339603370073}
   - component: {fileID: 1784615183072835422}
   - component: {fileID: 8920362821540437849}
-  - component: {fileID: 7581525532403383531}
   - component: {fileID: 353497958}
   - component: {fileID: 353497957}
   - component: {fileID: 4818514671046868061}
+  - component: {fileID: 3845957939772953369}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -260,22 +260,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 3977453257267981606, guid: f91a91ec7a207ea4f8d4dc19604e19a8,
     type: 3}
---- !u!114 &7581525532403383531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593174883186586275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b228b2346c8229d429116fee7ebb2ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 2
-  isInvencible: 0
-  charges: 0
-  invensiblyOnStart: 1
 --- !u!114 &353497958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +300,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7b1ccbbf1b47f4c9997d7e18eb329e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3845957939772953369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593174883186586275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e54a8bb06f5e95488eefd8066f3d60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 2
+  isInvencible: 0
+  charges: 0
+  invensiblyOnStart: 1
 --- !u!1 &3588456871346197285
 GameObject:
   m_ObjectHideFlags: 0

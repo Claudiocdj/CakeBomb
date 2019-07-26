@@ -7,7 +7,13 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance = null;
 
-    private string[] levelsName = { "1-1"};
+    private string[] levelsName = { "1-1", "1-2", "1-3", "1-4", "1-5" };
+
+    private string[] phrases = { "Saiam do meu vilarejo",
+        "Otimo, agora onde levaram minha irmazinha?",
+        "Esses caras destruiram a cidade inteira, nao eh possivel",
+        "Para chutar, basta ficar em frente ao bolo e apertar 'X'.",
+        "Aquele rato tem um chapeuzinho amarelo na cabeça? kk"};
 
     private int currentLevelId;
 
@@ -29,7 +35,7 @@ public class GameController : MonoBehaviour
 
     public string GetLevelPhrase()
     {
-        return "oi nego";
+        return phrases[currentLevelId];
     }
 
     public void SetMenuScreen()

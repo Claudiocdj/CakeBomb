@@ -14,5 +14,7 @@ public class GameOver : MonoBehaviour
             .GetComponent<HighScore>();
 
         scoreText.text = "total cookies: " + score.totalScore;
+
+        Destroy( GameObject.FindWithTag( "Score" ) );
     }
 }

@@ -18,11 +18,15 @@ public class SummonObjects : MonoBehaviour
 
     private GridController gridC;
 
+    private GridMovement move;
+
     private void Start()
     {
         timer = Random.Range( minTimeToSummon, maxTimeToSummon + 1 );
 
         gridC = GameObject.FindWithTag( "MapController" ).GetComponent<GridController>();
+
+        move = GetComponent<GridMovement>();
     }
 
     private void Update()
@@ -35,7 +39,12 @@ public class SummonObjects : MonoBehaviour
 
             if(dir != Vector2.zero && objPrefab != null)
             {
-                Vector3 pos = FindNewDirection() + transform.position;
+                Vector3 posInt = new Vector2(
+                    Mathf.RoundToInt(transform.position.x),
+                    Mathf.RoundToInt( transform.position.y )
+                    );
+
+                Vector3 pos = FindNewDirection() + posInt;
 
                 Instantiate( objPrefab, pos, Quaternion.identity );
             }

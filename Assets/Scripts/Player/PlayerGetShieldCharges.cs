@@ -9,8 +9,7 @@ public class PlayerGetShieldCharges : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log( GameObject.FindWithTag( "ScoreShield" )
-            .GetComponent<Score>().scorePoints );
+        inv = GetComponent<InvencibilityOnDamage>();
 
         inv.charges = GameObject.FindWithTag( "ScoreShield" )
             .GetComponent<Score>().scorePoints;

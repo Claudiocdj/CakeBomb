@@ -18,11 +18,7 @@ public class ScoreKick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canKick = false;
-
-        scoreText.text = "OFF";
-
-        scoreButton.gameObject.SetActive( false );
+        ResetKick();
 
         cookies = GameObject.FindWithTag( "ScoreCookie" ).GetComponent<Score>();
 
@@ -43,9 +39,18 @@ public class ScoreKick : MonoBehaviour
         else return false;
     }
 
+    public void ResetKick()
+    {
+        scoreText.text = "KICK OFF";
+
+        canKick = false;
+
+        scoreButton.gameObject.SetActive( false );
+    }
+
     public void OnClick()
     {
-        scoreText.text = "ON";
+        scoreText.text = "KICK ON";
 
         cookies.RemovePoints( requiredPoints );
 

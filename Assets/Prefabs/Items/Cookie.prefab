@@ -209,7 +209,7 @@ MonoBehaviour:
   tagWithCollide:
   - Player
   animPrefab: {fileID: 0}
-  minCoins: 50
-  maxCoins: 100
+  minCoins: 100
+  maxCoins: 200
   pointsPopupPrefab: {fileID: 211950226280607764, guid: c6b26f2bfc5a37b49bb80dfba0148d31,
     type: 3}

@@ -8,6 +8,10 @@ public class PlayerDead : Explode
     {
         Score Scorelives = GameObject.FindWithTag( "ScoreLives" ).GetComponent<Score>();
 
+        ScoreKick scoreKick = GameObject.FindWithTag( "ScoreKick" ).GetComponent<ScoreKick>();
+
+        scoreKick.ResetKick();
+
         GameController gm = GameObject.FindWithTag( "GameController" ).GetComponent<GameController>();
 
         if (Scorelives.scorePoints > 1)

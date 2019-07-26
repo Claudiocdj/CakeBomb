@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8734926197428628017}
   - component: {fileID: 4077475763962680075}
   - component: {fileID: 1765867864836827660}
+  - component: {fileID: 5901093064125167288}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Enemy
@@ -237,4 +238,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 3977453257267981606, guid: f91a91ec7a207ea4f8d4dc19604e19a8,
+    type: 3}
+--- !u!114 &5901093064125167288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8318730524420752082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74f05272e91d6a4c87bbc1d818562c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPoints: 50
+  maxPoints: 100
+  pointsPopupPrefab: {fileID: 211950226280607764, guid: c6b26f2bfc5a37b49bb80dfba0148d31,
     type: 3}

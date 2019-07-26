@@ -16,10 +16,12 @@ GameObject:
   - component: {fileID: 1494055411740765703}
   - component: {fileID: 6977524732921843519}
   - component: {fileID: 8894309718837284154}
-  - component: {fileID: 2776619170265870002}
   - component: {fileID: 7432667743679321992}
   - component: {fileID: 8554611387009932662}
-  - component: {fileID: 945824762798340161}
+  - component: {fileID: 6554232871479968624}
+  - component: {fileID: 777606566}
+  - component: {fileID: 777606580}
+  - component: {fileID: 2776619170265870002}
   m_Layer: 0
   m_Name: KingRat
   m_TagString: Enemy
@@ -194,25 +196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagWithCollide:
   - Explosion
---- !u!114 &2776619170265870002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3225184410358531665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409cc99b8ae1f3d42914cf5a456521ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToNextBlock: 1
-  tagsWithCollide:
-  - Wall
-  - Bomb
-  - Box
-  - Enemy
-  probabilityOfChange: 100
 --- !u!114 &7432667743679321992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +222,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 3977453257267981606, guid: f91a91ec7a207ea4f8d4dc19604e19a8,
     type: 3}
---- !u!114 &945824762798340161
+--- !u!114 &6554232871479968624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3225184410358531665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74f05272e91d6a4c87bbc1d818562c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPoints: 200
+  maxPoints: 250
+  pointsPopupPrefab: {fileID: 211950226280607764, guid: c6b26f2bfc5a37b49bb80dfba0148d31,
+    type: 3}
+--- !u!114 &777606566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3225184410358531665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b228b2346c8229d429116fee7ebb2ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 2
+  isInvencible: 0
+  charges: 8
+  invensiblyOnStart: 0
+--- !u!114 &777606580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,5 +268,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 8318730524420752082, guid: d9c1840d719e2794ab4f94c1959ef22d,
     type: 3}
-  minTimeToSummon: 10
-  maxTimeToSummon: 30
+  minTimeToSummon: 4
+  maxTimeToSummon: 8
+--- !u!114 &2776619170265870002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3225184410358531665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409cc99b8ae1f3d42914cf5a456521ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToNextBlock: 1
+  tagsWithCollide:
+  - Wall
+  - Bomb
+  - Box
+  - Enemy
+  probabilityOfChange: 100
