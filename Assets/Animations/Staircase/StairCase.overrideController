@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: StairCase
+  m_Controller: {fileID: 9100000, guid: 668edfa7b9c1212479e07654b6ed552e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: bf8cc886776ae0b4b927403918b0a2bc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2fdc8cea955309d4688f6d9f509380d8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c1e407510ccb6de4bb71a156be457f6b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 977ebd90e3ccbd24f9368acc139b86c0, type: 2}

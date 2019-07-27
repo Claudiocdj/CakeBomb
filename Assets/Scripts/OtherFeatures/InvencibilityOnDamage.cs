@@ -8,6 +8,9 @@ public class InvencibilityOnDamage : Invencibility
 
     public bool invensiblyOnStart = false;
 
+    [SerializeField]
+    private GameObject animOnDamage;
+
     protected override void Awake()
     {
         base.Awake();
@@ -19,6 +22,14 @@ public class InvencibilityOnDamage : Invencibility
     public virtual void Active()
     {
         charges--;
+
+        if (animOnDamage)
+        {
+            GameObject objAnim = Instantiate( animOnDamage,
+                transform.position, Quaternion.identity );
+
+            objAnim.transform.parent = transform;
+        }
 
         ActiveInvencibility();
     }

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6606050612201311488}
   - component: {fileID: 5973005481931107595}
   - component: {fileID: 8059623428744286350}
+  - component: {fileID: 2812375037400747400}
   m_Layer: 0
   m_Name: CakeBomb
   m_TagString: Bomb
@@ -212,3 +213,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preferenceTags: []
+--- !u!114 &2812375037400747400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606050612201311614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896a1e56822485f4c8376193a46a70e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagWithCollide:
+  - Enemy
+  anim: {fileID: 8473749534171874631, guid: 7e2f83116f683604498456d52e7135d4, type: 3}
+  InstantiateWhoTriggers: 1

@@ -13,11 +13,6 @@ public class ObjectMoveInLineUntilCollide : GridMovement
         base.Start();
     }
 
-    public void SetDirection(Vector3 dir)
-    {
-        direction = dir;
-    }
-
     protected virtual void Update()
     {
         if (!isMoving && !stopMovement)

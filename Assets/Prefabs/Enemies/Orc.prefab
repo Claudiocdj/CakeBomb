@@ -17,10 +17,10 @@ GameObject:
   - component: {fileID: 5725467831255471074}
   - component: {fileID: 6111165884049281511}
   - component: {fileID: 1999527431652534045}
-  - component: {fileID: 7273947398311304808}
   - component: {fileID: 3704607393306666507}
   - component: {fileID: 3959545993618505863}
   - component: {fileID: 4129067491223913088}
+  - component: {fileID: 4908254831628674237}
   m_Layer: 0
   m_Name: Orc
   m_TagString: Enemy
@@ -207,25 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4de097660525548b6f0aa9ae646e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7273947398311304808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 244319510334265996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409cc99b8ae1f3d42914cf5a456521ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToNextBlock: 1.5
-  tagsWithCollide:
-  - Wall
-  - Bomb
-  - Box
-  - Enemy
-  probabilityOfChange: 10
 --- !u!114 &3704607393306666507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,4 +252,28 @@ MonoBehaviour:
   minPoints: 50
   maxPoints: 100
   pointsPopupPrefab: {fileID: 211950226280607764, guid: c6b26f2bfc5a37b49bb80dfba0148d31,
+    type: 3}
+--- !u!114 &4908254831628674237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244319510334265996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a4265aae72c7848b4850eb8d4b7e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToNextBlock: 1
+  tagsWithCollide:
+  - Wall
+  - Enemy
+  - Box
+  searchDistance: 5
+  somethingTag: Bomb
+  tagsWithBlokingSearch:
+  - Box
+  - Wall
+  animWhenFinded: {fileID: 6869367758803357480, guid: 84dfeb00056ad6647b3873bd5f534bcc,
     type: 3}

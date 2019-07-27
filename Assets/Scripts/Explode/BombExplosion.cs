@@ -39,6 +39,8 @@ public class BombExplosion : UpdateGridOnExplode
         foreach (var obj in destroyedObj)
             obj.GetComponent<Explode>().ExplodeEffect();
 
+        GameObject.FindWithTag( "GameController" ).GetComponent<AudioSource>().Play();
+
         base.ExplodeEffect();
     }
 

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 6554232871479968624}
   - component: {fileID: 777606566}
   - component: {fileID: 777606580}
-  - component: {fileID: 2776619170265870002}
+  - component: {fileID: 7604875065351150661}
   m_Layer: 0
   m_Name: KingRat
   m_TagString: Enemy
@@ -254,6 +254,8 @@ MonoBehaviour:
   isInvencible: 0
   charges: 8
   invensiblyOnStart: 0
+  animOnDamage: {fileID: 4613070110516586287, guid: daf59191e5959b243a238cc776bbaa1f,
+    type: 3}
 --- !u!114 &777606580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +272,9 @@ MonoBehaviour:
     type: 3}
   minTimeToSummon: 4
   maxTimeToSummon: 8
---- !u!114 &2776619170265870002
+  summonAnim: {fileID: 2996603157978659028, guid: 4033fcc48b561234f97828bc10a7afa4,
+    type: 3}
+--- !u!114 &7604875065351150661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,13 +283,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3225184410358531665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409cc99b8ae1f3d42914cf5a456521ff, type: 3}
+  m_Script: {fileID: 11500000, guid: c7a4265aae72c7848b4850eb8d4b7e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToNextBlock: 1
+  timeToNextBlock: 1.5
   tagsWithCollide:
   - Wall
-  - Bomb
-  - Box
   - Enemy
-  probabilityOfChange: 100
+  - Box
+  searchDistance: 4
+  tagsWithBlokingSearch:
+  - Box
+  - Wall
+  animWhenFinded: {fileID: 6869367758803357480, guid: 84dfeb00056ad6647b3873bd5f534bcc,
+    type: 3}
+  somethingTag: Bomb

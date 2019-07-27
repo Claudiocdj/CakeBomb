@@ -10,6 +10,8 @@ public class SummonObjects : MonoBehaviour
     private int minTimeToSummon;
     [SerializeField]
     private int maxTimeToSummon;
+    [SerializeField]
+    private GameObject summonAnim;
 
     private List<Vector3> positions = new List<Vector3>()
     { Vector3.up, Vector3.left, Vector3.right, Vector3.down };
@@ -45,6 +47,9 @@ public class SummonObjects : MonoBehaviour
                     );
 
                 Vector3 pos = FindNewDirection() + posInt;
+
+                if(summonAnim)
+                    Instantiate( summonAnim, pos, Quaternion.identity );
 
                 Instantiate( objPrefab, pos, Quaternion.identity );
             }

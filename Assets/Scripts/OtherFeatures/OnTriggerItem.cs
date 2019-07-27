@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class OnTriggerItem : OnTrigger
+public class OnTriggerItem : OnTriggerDestroy
 {
     [SerializeField]
     private GameObject animPrefab;
@@ -12,6 +12,6 @@ public class OnTriggerItem : OnTrigger
         if (animPrefab)
             Instantiate( animPrefab, transform.position, Quaternion.identity );
 
-        Destroy( gameObject );
+        base.Trigger( other );
     }
 }

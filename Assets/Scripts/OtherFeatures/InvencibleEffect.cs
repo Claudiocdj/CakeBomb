@@ -24,7 +24,9 @@ public class InvencibleEffect : Invencibility
 
         isInvencible = false;
 
-        yield return new WaitForSeconds( timeNormal );
+        int n = Random.Range( timeNormal - 1, timeNormal + 2 );
+
+        yield return new WaitForSeconds( n );
 
         StartCoroutine( InvencibilityEffect() );
     }
@@ -34,7 +36,7 @@ public class InvencibleEffect : Invencibility
         isInvencible = true;
 
         mySprite.color = new Color( 1, 1, 1, 0.2f );
-
+        
         yield return new WaitForSeconds( timer );
 
         StartCoroutine( SetNormal() );

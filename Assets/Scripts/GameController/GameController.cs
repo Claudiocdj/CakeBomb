@@ -7,13 +7,16 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance = null;
 
-    private string[] levelsName = { "1-1", "1-2", "1-3", "1-4", "1-5" };
+    private string[] levelsName = { "1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "1-7", "1-8" };
 
-    private string[] phrases = { "Saiam do meu vilarejo",
-        "Otimo, agora onde levaram minha irmazinha?",
-        "Esses caras destruiram a cidade inteira, nao eh possivel",
+    private string[] phrases = { "Use suas habilidades de confeiteira e resgate sua irmazinha.",
+        "O upgrade de chute custa 1000 cookies.",
         "Para chutar, basta ficar em frente ao bolo e apertar 'X'.",
-        "Aquele rato tem um chapeuzinho amarelo na cabeça? kk"};
+        "Cuidado com o rato com coroa.",
+        "O rato nao era o ultimo boss.",
+        "Antes de passar de fase cheque todas as caixas.",
+        "Agora os desafios sao maiores.",
+        "Chegou o momento"};
 
     private int currentLevelId;
 

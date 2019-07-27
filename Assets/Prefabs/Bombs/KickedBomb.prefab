@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2051850813374334928}
   - component: {fileID: 2397123819988384341}
   - component: {fileID: 1526909043467233187}
+  - component: {fileID: 807752449938824137}
   m_Layer: 0
   m_Name: KickedBomb
   m_TagString: Bomb
@@ -232,3 +233,19 @@ MonoBehaviour:
   - Box
   - Enemy
   direction: {x: 1, y: 0, z: 0}
+--- !u!114 &807752449938824137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526909043467233189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896a1e56822485f4c8376193a46a70e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagWithCollide:
+  - Enemy
+  anim: {fileID: 8473749534171874631, guid: 7e2f83116f683604498456d52e7135d4, type: 3}
+  InstantiateWhoTriggers: 1

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BrownOrc
+  m_Controller: {fileID: 9100000, guid: ac4f620f39eed9a469e85c052aaed5ff, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f4556dc83ffca88489b381ace9339d52, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 81384c1114c8faa40b382ee40559109a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 113f9b47778f9564ab146666560c79ad, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dc63e532be4a1cc4fabd9d4d3935219e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 476312abc90ca024d8a6c4786b4b576f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1b973f96cdd27004cabf93ffec1d3b98, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4dd28d6e562713d4781fcc29b54929f6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3d22057da629f8e4183d6b96414bad07, type: 2}
