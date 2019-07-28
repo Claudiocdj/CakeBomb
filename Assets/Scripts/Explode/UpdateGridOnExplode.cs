@@ -12,7 +12,8 @@ public class UpdateGridOnExplode : Explode
 
     public override void ExplodeEffect()
     {
-        gridC.SetGround( transform.position );
+        if(gridC.GetObj(transform.position).tag == gameObject.tag )
+            gridC.SetGround( transform.position );
 
         base.ExplodeEffect();
     }

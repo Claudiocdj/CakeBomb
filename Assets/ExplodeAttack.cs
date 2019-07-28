@@ -9,7 +9,7 @@ public class ExplodeAttack : MonoBehaviour
     [SerializeField]
     private float attackDelay;
 
-    private OnTriggerExplode inv;
+    private InvencibilityOnDamage inv;
 
     private ObjectMoveWithRandomlyFactor move;
 
@@ -23,7 +23,7 @@ public class ExplodeAttack : MonoBehaviour
 
     private void Start()
     {
-        inv = GetComponent<OnTriggerExplode>();
+        inv = GetComponent<InvencibilityOnDamage>();
 
         move = GetComponent<ObjectMoveWithRandomlyFactor>();
 
@@ -50,10 +50,7 @@ public class ExplodeAttack : MonoBehaviour
 
     private IEnumerator AttackCoroutine()
     {
-        Debug.Log( "começo" );
         endCoroutine = false;
-
-        inv.enabled = false;
 
         move.enabled = false;
 
@@ -61,7 +58,11 @@ public class ExplodeAttack : MonoBehaviour
 
         anim.SetBool( "Attack", true );
 
+        inv.isInvencible = true;
+
         yield return new WaitForSeconds( 1f );
+
+        GetComponent<AudioSource>().Play();
 
         InstantiateExplosions();
 
@@ -69,10 +70,9 @@ public class ExplodeAttack : MonoBehaviour
         
         anim.SetBool( "Attack", false );
 
-        yield return new WaitForSeconds( 1f );
+        inv.isInvencible = false;
 
-        Debug.Log( "termino" );
-        inv.enabled = true;
+        yield return new WaitForSeconds( 1f );
 
         move.enabled = true;
 
@@ -106,8 +106,6 @@ public class ExplodeAttack : MonoBehaviour
         for (int i = 1; i < 10; i++)
         {
             obj = gridC.GetObj( new Vector2( pos.x + i, pos.y ) );
-            if (obj) Debug.Log( obj.tag );
-            else Debug.Log( "null" );
             if (obj && obj.tag != "Wall")
                 expPos.Add( new Vector2( pos.x + i, pos.y ) );
 
@@ -117,8 +115,6 @@ public class ExplodeAttack : MonoBehaviour
         for (int i = 1; i < 10; i++)
         {
             obj = gridC.GetObj( new Vector2( pos.x - i, pos.y ) );
-            if (obj) Debug.Log( obj.tag );
-            else Debug.Log( "null" );
             if (obj && obj.tag != "Wall")
                 expPos.Add( new Vector2( pos.x - i, pos.y ) );
 
@@ -128,8 +124,6 @@ public class ExplodeAttack : MonoBehaviour
         for (int i = 1; i < 10; i++)
         {
             obj = gridC.GetObj( new Vector2( pos.x, pos.y - i ) );
-            if (obj) Debug.Log( obj.tag );
-            else Debug.Log( "null" );
             if (obj && obj.tag != "Wall")
                 expPos.Add( new Vector2( pos.x, pos.y - i ) );
 
@@ -139,8 +133,6 @@ public class ExplodeAttack : MonoBehaviour
         for (int i = 1; i < 10; i++)
         {
             obj = gridC.GetObj( new Vector2( pos.x, pos.y + i ) );
-            if (obj) Debug.Log( obj.tag );
-            else Debug.Log( "null" );
             if (obj && obj.tag != "Wall")
                 expPos.Add( new Vector2( pos.x, pos.y + i ) );
 

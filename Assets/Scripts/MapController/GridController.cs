@@ -79,6 +79,7 @@ public class GridController : MonoBehaviour
     }
 
     //DEBUG
+    /*
     private void OnDrawGizmos()
     {
         if (!useGizmos) return;
@@ -108,5 +109,5 @@ public class GridController : MonoBehaviour
 
                 Gizmos.DrawCube( new Vector3( i + 0.5f, j + 0.5f, 0f ), Vector3.one );
             }
-    }
+    }*/
 }

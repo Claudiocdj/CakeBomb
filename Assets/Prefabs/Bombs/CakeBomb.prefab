@@ -169,6 +169,7 @@ MonoBehaviour:
     type: 3}
   blokingTags:
   - Wall
+  - Explosion
   destroyedTags:
   - Box
   explosionForce: 0

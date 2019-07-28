@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   isInvencible: 0
-  charges: 8
+  charges: 7
   invensiblyOnStart: 0
   animOnDamage: {fileID: 4613070110516586287, guid: daf59191e5959b243a238cc776bbaa1f,
     type: 3}

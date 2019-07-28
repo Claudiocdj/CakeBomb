@@ -17,6 +17,8 @@ public class OnTriggerItemAddPoints : OnTriggerItem
         GameObject.FindWithTag( "ScoreCookie" )
             .GetComponent<Score>().AddPoints( n );
 
+        GameObject.FindWithTag( "ScoreCookie" ).GetComponent<AudioSource>().Play();
+
         if (pointsPopupPrefab)
         {
             GameObject obj = Instantiate( pointsPopupPrefab, transform.position, Quaternion.identity );

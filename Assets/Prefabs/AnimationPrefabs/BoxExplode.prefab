@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 720961412567225176}
   - component: {fileID: 720961412567225177}
   - component: {fileID: 720961412567225178}
-  - component: {fileID: 720961412567225179}
   - component: {fileID: 3610284601205797434}
+  - component: {fileID: 1911302954549622191}
+  - component: {fileID: 9063132495710445133}
   m_Layer: 0
   m_Name: BoxExplode
   m_TagString: Explosion
@@ -101,19 +102,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &720961412567225179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720961412567225180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca8d055368b1e3049a0a1e1b5e961b80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 0.3
 --- !u!61 &3610284601205797434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,3 +128,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
+--- !u!114 &1911302954549622191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720961412567225180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f738925670856d8439f0106c1a9006d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preferenceTags: []
+--- !u!114 &9063132495710445133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720961412567225180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15df577b927464a4eb8190eb88f818de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0.3
+  counter: 0

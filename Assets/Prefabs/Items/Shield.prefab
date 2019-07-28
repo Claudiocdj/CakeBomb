@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18032817878085990}
   - component: {fileID: 3473414621977341907}
+  - component: {fileID: 7071597993934931246}
   - component: {fileID: 2080023732336512876}
   - component: {fileID: 8793572442219681518}
   - component: {fileID: 6220888601741174016}
@@ -85,6 +86,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &7071597993934931246
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133004583600651921}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!95 &2080023732336512876
 Animator:
   serializedVersion: 3
@@ -172,6 +194,7 @@ MonoBehaviour:
   isInvencible: 1
   charges: 0
   invensiblyOnStart: 1
+  animOnDamage: {fileID: 0}
 --- !u!114 &6561498760505448726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,3 +209,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagWithCollide:
   - Player
+  animPrefab: {fileID: 0}

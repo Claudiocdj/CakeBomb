@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4819468048471720033}
   - component: {fileID: 8905220613343260635}
   - component: {fileID: 2016426731735859707}
+  - component: {fileID: 7798790048767367997}
   - component: {fileID: 172213827136853360}
   - component: {fileID: 6421498219383693232}
   - component: {fileID: 6873111381938457973}
@@ -105,6 +106,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &7798790048767367997
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492808158300885797}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &172213827136853360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,6 +169,7 @@ MonoBehaviour:
   isInvencible: 0
   charges: 1
   invensiblyOnStart: 1
+  animOnDamage: {fileID: 0}
 --- !u!114 &6873111381938457973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +212,7 @@ MonoBehaviour:
   isInvencible: 1
   charges: 0
   invensiblyOnStart: 1
+  animOnDamage: {fileID: 0}
 --- !u!114 &2442553678565617598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +227,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagWithCollide:
   - Player
+  animPrefab: {fileID: 0}

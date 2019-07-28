@@ -169,6 +169,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 7558622501420608844, guid: 3310f27c2ae954e448d50c397bb7290b,
     type: 3}
   blokingTags:
+  - Explosion
   - Wall
   destroyedTags:
   - Box
@@ -230,6 +231,7 @@ MonoBehaviour:
   isInvencible: 1
   charges: 0
   invensiblyOnStart: 1
+  animOnDamage: {fileID: 0}
 --- !u!114 &1307562373672340674
 MonoBehaviour:
   m_ObjectHideFlags: 0

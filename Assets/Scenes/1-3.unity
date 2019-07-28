@@ -4076,7 +4076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaf37c69134c0e4fbf93fd43c603316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 4774062785773419455, guid: e0fa3bf3e1a02b94aba2c00439e51a1e,
+  objectPrefab: {fileID: 4987149488661455646, guid: 7be0d18ebf084b542b92cd280cfc3695,
     type: 3}
   prohibitedPos:
   - {x: 0, y: 0}
