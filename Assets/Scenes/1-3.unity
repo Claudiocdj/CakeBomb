@@ -317,16 +317,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4896149577896970589, guid: 638fccd34a3435d4082209b6156369e1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896149579208285002, guid: 638fccd34a3435d4082209b6156369e1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4896149577896970579, guid: 638fccd34a3435d4082209b6156369e1,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -3694,6 +3684,16 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[97].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4896149577896970589, guid: 638fccd34a3435d4082209b6156369e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896149579208285002, guid: 638fccd34a3435d4082209b6156369e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 638fccd34a3435d4082209b6156369e1, type: 3}
 --- !u!1001 &1275265272
@@ -4116,7 +4116,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 2697643319816321413, guid: 652d2c42b2bda76478535c3771eecdce,
     type: 3}
-  prohibitedPos: []
+  prohibitedPos:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 0, y: 1}
   number: 1
 --- !u!114 &6588195745949432668
 MonoBehaviour:
