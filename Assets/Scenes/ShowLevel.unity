@@ -315,8 +315,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0
-  m_Text: to puta, vou matar todo mundo
+    m_LineSpacing: 1
+  m_Text: 'Para chutar: compre o upgrade, fique de frente para o bolo e aperte ''X''.'
 --- !u!222 &918012883
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -341,8 +341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0011196, y: -69.96}
-  m_SizeDelta: {x: 574.19, y: 59.91}
+  m_AnchoredPosition: {x: 0.00027466, y: -64.1}
+  m_SizeDelta: {x: 574.2, y: 48.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1031417367
 GameObject:
