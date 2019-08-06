@@ -11,9 +11,9 @@ public class GameController : MonoBehaviour
 
     private string[] phrases = { "Use suas habilidades de confeitaria e resgate sua irmazinha.",
         "Antes de passar de fase cheque todas as caixas.",
-        "Para chutar, basta ficar de frente para o bolo e apertar 'X'.",
+        "Para chutar: compre o upgrade, fique de frente para o bolo e aperte 'X'.",
         "Cuidado com o rato com coroa.",
-        "O rato nao era o único boss.",
+        "O rato nao era o unico boss.",
         "Agora os desafios sao maiores.",
         "Voce ja esta quase la.",
         "Chegou o momento."};

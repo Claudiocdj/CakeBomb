@@ -9595,6 +9595,8 @@ MonoBehaviour:
   - {x: 2, y: 2}
   - {x: 3, y: 2}
   - {x: 2, y: 3}
+  - {x: 3, y: 0}
+  - {x: 0, y: 3}
   number: 2
 --- !u!114 &3673293518532890402
 MonoBehaviour:
@@ -9619,6 +9621,10 @@ MonoBehaviour:
   - {x: 1, y: 2}
   - {x: 2, y: 1}
   - {x: 2, y: 2}
+  - {x: 2, y: 3}
+  - {x: 3, y: 2}
+  - {x: 3, y: 0}
+  - {x: 0, y: 3}
   number: 3
 --- !u!114 &4172021007760393793
 MonoBehaviour:
@@ -9862,4 +9868,8 @@ MonoBehaviour:
   - {x: 1, y: 2}
   - {x: 2, y: 1}
   - {x: 2, y: 2}
+  - {x: 2, y: 3}
+  - {x: 3, y: 2}
+  - {x: 3, y: 0}
+  - {x: 0, y: 3}
   number: 3
